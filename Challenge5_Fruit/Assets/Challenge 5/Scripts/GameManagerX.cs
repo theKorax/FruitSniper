@@ -35,7 +35,6 @@ public class GameManagerX : MonoBehaviour
         }
         else
         {
-            timerIsRunning = false;
             timeText.text = "Time: " + 0;
             GameOver();
         }
@@ -108,9 +107,16 @@ public class GameManagerX : MonoBehaviour
 
     void UpdateTime()
     {
-        time -= Time.deltaTime;
-        timeWhole = (int)Mathf.Round(time);
-        timeText.text = "Time: " + timeWhole;
+       if(timeWhole > 0)
+        {
+            time -= Time.deltaTime;
+            timeWhole = (int)Mathf.Round(time);
+            timeText.text = "Time: " + timeWhole;
+        }
+        else
+        {
+            timerIsRunning = false;
+        }
     }
 
 }
