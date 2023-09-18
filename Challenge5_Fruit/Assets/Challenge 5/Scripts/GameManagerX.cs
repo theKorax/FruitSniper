@@ -35,7 +35,9 @@ public class GameManagerX : MonoBehaviour
         }
         else
         {
-            Debug.Log("Error");
+            timerIsRunning = false;
+            timeText.text = "Time: " + 0;
+            GameOver();
         }
     }
     public void StartGame(int difficulty)
@@ -106,18 +108,9 @@ public class GameManagerX : MonoBehaviour
 
     void UpdateTime()
     {
-        if (timeWhole > 0)
-        {
-            time -= Time.deltaTime;
-            timeWhole = (int)Mathf.Round(time);
-            timeText.text = "Time: " + timeWhole;
-        }
-        else
-        {
-            timerIsRunning = false;
-            timeText.text = "Time: " + 0;
-            GameOver();
-        }
+        time -= Time.deltaTime;
+        timeWhole = (int)Mathf.Round(time);
+        timeText.text = "Time: " + timeWhole;
     }
 
 }
