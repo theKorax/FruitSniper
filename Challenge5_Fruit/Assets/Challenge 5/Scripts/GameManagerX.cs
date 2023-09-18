@@ -49,6 +49,7 @@ public class GameManagerX : MonoBehaviour
         time = 60;
         UpdateScore(0);
         titleScreen.SetActive(false);
+
     }
 
     // While game is active spawn a random target
