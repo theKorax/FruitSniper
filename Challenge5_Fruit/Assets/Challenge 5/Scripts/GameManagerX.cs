@@ -9,6 +9,7 @@ public class GameManagerX : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI timeText;
     public GameObject titleScreen;
     public Button restartButton; 
 
@@ -35,6 +36,7 @@ public class GameManagerX : MonoBehaviour
         else
         {
             timerIsRunning = false;
+            timeText.text = "Time: " + 0;
             GameOver();
         }
     }
@@ -107,6 +109,7 @@ public class GameManagerX : MonoBehaviour
     {
         time-=Time.deltaTime;
         timeWhole = (int)Mathf.Round(time);
+        timeText.text = "Time: " + timeWhole;
     }
 
 }
