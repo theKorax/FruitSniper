@@ -37,6 +37,7 @@ public class GameManagerX : MonoBehaviour
         {
             timeText.text = "Time: " + 0;
             GameOver();
+            titleScreen.gameObject.SetActive(false);
         }
     }
     public void StartGame(int difficulty)
