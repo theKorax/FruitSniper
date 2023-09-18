@@ -29,7 +29,7 @@ public class GameManagerX : MonoBehaviour
     // Start the game, remove title screen, reset score, and adjust spawnRate based on difficulty button clicked
     private void Update()
     {
-       if(timerIsRunning && isGameActive)
+       if(timerIsRunning)
         {
             UpdateTime();
         }
