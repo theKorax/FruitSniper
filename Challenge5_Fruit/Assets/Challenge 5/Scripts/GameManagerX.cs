@@ -107,7 +107,7 @@ public class GameManagerX : MonoBehaviour
 
     void UpdateTime()
     {
-       if(timeWhole > 0)
+       if(time < 0)
         {
             time -= Time.deltaTime;
             timeWhole = (int)Mathf.Round(time);
