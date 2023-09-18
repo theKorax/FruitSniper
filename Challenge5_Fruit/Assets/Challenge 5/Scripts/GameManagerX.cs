@@ -107,13 +107,10 @@ public class GameManagerX : MonoBehaviour
 
     void UpdateTime()
     {
-       if(time < 0)
-        {
-            time -= Time.deltaTime;
-            timeWhole = (int)Mathf.Round(time);
-            timeText.text = "Time: " + timeWhole;
-        }
-        else
+        time -= Time.deltaTime;
+        timeWhole = (int)Mathf.Round(time);
+        timeText.text = "Time: " + timeWhole;
+        if(timeWhole == 0)
         {
             timerIsRunning = false;
         }
