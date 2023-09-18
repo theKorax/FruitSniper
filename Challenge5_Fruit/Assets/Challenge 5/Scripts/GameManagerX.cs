@@ -33,6 +33,10 @@ public class GameManagerX : MonoBehaviour
         {
             UpdateTime();
         }
+        else
+        {
+            Debug.Log("Error");
+        }
     }
     public void StartGame(int difficulty)
     {
